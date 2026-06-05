@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Application</title>
+    <link rel="stylesheet" href="todo-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My To-Do List</h1>
+            <p>Stay organized and productive</p>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        class="todo-input" 
+                        placeholder="Add a new task..."
+                        autocomplete="off"
+                    >
+                    <button id="addBtn" class="add-btn">Add Task</button>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+            </div>
+
+            <!-- Todo List -->
+            <section class="todo-section">
+                <ul id="todoList" class="todo-list"></ul>
+                <div id="emptyState" class="empty-state">
+                    <p>✨ No tasks yet. Add one to get started!</p>
+                </div>
+            </section>
+
+            <!-- Statistics -->
+            <div class="stats-section">
+                <div class="stat">
+                    <span class="stat-label">Total Tasks:</span>
+                    <span id="totalTasks" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Completed:</span>
+                    <span id="completedTasks" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Remaining:</span>
+                    <span id="remainingTasks" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <!-- Clear Completed -->
+            <div class="action-buttons">
+                <button id="clearCompletedBtn" class="clear-btn">Clear Completed Tasks</button>
+                <button id="clearAllBtn" class="clear-all-btn">Clear All Tasks</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="todo-script.js"></script>
+</body>
+</html>
